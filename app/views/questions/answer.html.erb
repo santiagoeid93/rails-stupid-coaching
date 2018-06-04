@@ -1,0 +1,16 @@
+
+<div class="coach-answer">
+  User:
+  <%= @questions %>
+</div>
+
+<% if @questions == "I am going to work" %>
+  <p>Coach: Great!</p>
+<% elsif @questions.include?("?") %>
+ <p>Coach: Silly question, get dressed and go to work!</p>
+<% else %>
+  <p>Coach: I don't care, get dressed and go to work!</p>
+<% end %>
+<div>
+  <%= link_to "Ask me something else", "http://localhost:3000/ask" %>
+</div>
